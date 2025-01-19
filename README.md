@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/5j0wenmkdiw7iahp?svg=true)](https://ci.appveyor.com/project/Al101020/13-2-06)
 <br>
-Здесь ссылка
+Здесь ссылка: https://al101020.github.io/13-2.06/
 
 <br>
 
@@ -20,4 +20,15 @@
   },
   devtool: 'source-map', ...
 7. Команда 'yarn start' открывает Хром на 9000 порту
-
+8. На сайте https://ci.appveyor.com/ добавил новый проект и выбрал созданый репозиторий на GitHub.
+9. В Setting в проекте на сайте https://ci.appveyor.com/ => выбираю Badges => в Sample markdown code копирую себе код бэйджика
+10. Добавил бэйджик и ссылку в файл READMY.md
+-------
+git status
+git add -A
+git commit -m "commit-2"
+git push
+-------
+12. Добавил в проект переменную Setting => Environment(окружающая среда) 
+	=> Add variable(добавить переменную) =>
+	GITHUB_TOKEN : тут токен
