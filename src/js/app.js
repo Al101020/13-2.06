@@ -1,113 +1,109 @@
-// TODO: write code here
-import { mdConvert } from 'md-converter';
+// // TODO: write code here
+// import { mdConvert } from 'md-converter';
 
-console.log('app.js bundled');
+// console.log('app.js bundled');
 
-const fileContainer = document.querySelector('.file-container');
-const fileInput = fileContainer.querySelector('.overlapped');
+// const fileContainer = document.querySelector('.file-container');
+// const fileInput = fileContainer.querySelector('.overlapped');
 
-const previewTitle = document.querySelector('.preview-title');
-const previewText = document.querySelector('.preview-text');
-const previewHtml = document.querySelector('.preview-html');
-const previewImage = document.querySelector('.preview-image');
+// const previewTitle = document.querySelector('.preview-title');
+// const previewText = document.querySelector('.preview-text');
+// const previewHtml = document.querySelector('.preview-html');
+// const previewImage = document.querySelector('.preview-image');
 
-fileContainer.addEventListener('click', (e) => {
-    console.log(e);
-    
-    console.log('click');
+// fileContainer.addEventListener('click', (e) => {
+//   console.log(e);
 
-    fileInput.dispatchEvent(new MouseEvent('click'));
-});
+//   console.log('click');
 
-fileContainer.addEventListener('dragover', (e) => {
-    e.preventDefault();
-})
+//   fileInput.dispatchEvent(new MouseEvent('click'));
+// });
 
-fileContainer.addEventListener('drop', (e) => {
-    e.preventDefault();
+// fileContainer.addEventListener('dragover', (e) => {
+//   e.preventDefault();
+// });
 
-    console.log('drop')
+// fileContainer.addEventListener('drop', (e) => {
+//   e.preventDefault();
 
-    previewImage.src = URL.createObjectURL(e.dataTransfer.files && e.dataTransfer.files[0])
-})
+//   console.log('drop');
 
-const displayImageContent = (e) => {
-    console.log(e);
+//   previewImage.src = URL.createObjectURL(e.dataTransfer.files && e.dataTransfer.files[0]);
+// });
 
-    previewImage.src = e.target.result;
-}
+// const displayImageContent = (e) => {
+//   console.log(e);
 
-const displayTextContent = (e) => {
-    console.log(e);
+//   previewImage.src = e.target.result;
+// };
 
-    previewText.textContent = e.target.result;
-}
+// const displayTextContent = (e) => {
+//   console.log(e);
 
-const displayMDTextContent = (e) => {
-    console.log(e);
+//   previewText.textContent = e.target.result;
+// };
 
-    previewHtml.innerHTML = mdConvert(e.target.result);
-}
+// const displayMDTextContent = (e) => {
+//   console.log(e);
 
-fileInput.addEventListener('change', (e) => {
-    console.log(e);
-    console.dir(fileInput)
+//   previewHtml.innerHTML = mdConvert(e.target.result);
+// };
 
-    const file = fileInput.files && fileInput.files[0];
+// fileInput.addEventListener('change', (e) => {
+//   console.log(e);
+//   console.dir(fileInput);
 
-    if(!file) return;
+//   const file = fileInput.files && fileInput.files[0];
 
-    previewTitle.textContent = file.name;
+//   if (!file) return;
 
-    const url = URL.createObjectURL(file);
+//   previewTitle.textContent = file.name;
 
-    const link = document.createElement('a');
+//   const url = URL.createObjectURL(file);
 
-    link.href = url;
-    link.rel = 'noopener';
-    link.download = file.name;
+//   const link = document.createElement('a');
 
-    link.click();
+//   link.href = url;
+//   link.rel = 'noopener';
+//   link.download = file.name;
 
-    console.log(url)
-})
+//   link.click();
 
+//   console.log(url);
+// });
 
+// const items = document.querySelector('.items');
 
-const items = document.querySelector('.items');
+// const itemsElements = items.querySelector('.items-item');
 
-const itemsElements = items.querySelector('.items-item');
+// let actualElement;
 
-let actualElement;
+// const onMouseOver = (e) => {
+//   console.log(e);
 
-const onMouseOver = (e) => {
-    console.log(e);
+//   actualElement.style.top = `${e.clientY}px`;
+//   actualElement.style.left = `${e.clientX}px`;
+// };
 
-    actualElement.style.top = e.clientY + 'px';
-    actualElement.style.left = e.clientX + 'px';
-};
+// const onMouseUp = (e) => {
+//   const mouseUpItem = e.target;
 
-const onMouseUp = (e) => {
-    const mouseUpItem = e.target;
+//   items.insertBefore(actualElement, mouseUpItem);
 
-    items.insertBefore(actualElement, mouseUpItem);
+//   actualElement.classList.remove('dragged');
+//   actualElement = undefined;
 
-    actualElement.classList.remove('dragged');
-    actualElement = undefined;
+//   document.documentElement.removeEventListener('mouseup', onMouseUp);
+//   document.documentElement.removeEventListener('mouseover', onMouseOver);
+// };
 
-    document.documentElement.removeEventListener('mouseup', onMouseUp);
-    document.documentElement.removeEventListener('mouseover', onMouseOver);
-};
+// items.addEventListener('mousedown', (e) => {
+//   e.preventDefault();
 
+//   actualElement = e.target;
 
+//   actualElement.classList.add('dragged');
 
-items.addEventListener('mousedown', (e) => {
-    e.preventDefault();
-
-    actualElement = e.target;
-    
-    actualElement.classList.add('dragged');
-
-    document.documentElement.addEventListener('mouseup', onMouseUp);
-    document.documentElement.addEventListener('mouseover', onMouseOver);
-})
+//   document.documentElement.addEventListener('mouseup', onMouseUp);
+//   document.documentElement.addEventListener('mouseover', onMouseOver);
+// });

@@ -1,4 +1,5 @@
-Здесь AppVeor<br>
+[![Build status](https://ci.appveyor.com/api/projects/status/5j0wenmkdiw7iahp?svg=true)](https://ci.appveyor.com/project/Al101020/13-2-06)
+<br>
 Здесь ссылка
 
 <br>
