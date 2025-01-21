@@ -14,10 +14,8 @@ fileContainer.addEventListener('click', (e) => {
 setTimeout(() => fileInput.dispatchEvent(new MouseEvent('click')), 6000);
 
 fileInput.addEventListener('click', (e) => {
-    console.log(e);
+  console.log(e);
 });
-
-
 
 // // TODO: write code here
 // import { mdConvert } from 'md-converter';
