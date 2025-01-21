@@ -32,3 +32,62 @@ git push
 12. Добавил в проект переменную Setting => Environment(окружающая среда) 
 	=> Add variable(добавить переменную) =>
 	GITHUB_TOKEN : тут токен
+13. Добавил ссылку и бэйджик.
+-------
+git status
+git add -A
+git commit -m "commit-3"
+git push
+-------
+14. input:
+	- радио-кнопка
+	- перетаскивающаяся штуковина
+	- то он поле ввода с которого можно перетаскивать файлы(сказано было в видеоуроке)
+15. В файле .appveyor.yml поменял версию node.js на 20.
+-------
+git status
+git add -A
+git commit -m "commit-4 .appveyor.yml изменил node.js на 20"
+git push
+-------
+- ошибка
+16. Удалил yarn.lock, package-lock.json и папку node_modules.
+	Команда: yarn - установка зависимостей.
+-------
+git status
+git add -A
+git commit -m "commit-5 в .appveyor.yml изм. stack: node 18"
+git push
+-------
+- ошибка, просит какойто аудит.
+
+=================================================================================================
+	WebPack(проект) - скопировал проект 13-2.05 без файла READMY.md(бэйджик и ссылка) и папки SRC
+-------
+git status
+git add -A
+git commit -m "commit-7"
+git push
+-------
+	в файле .appveyor.yml меняем строку: stack: node 20  # окружение
+	в файле C:\_GitHub_\13-2.06\.github\workflows\web.yml меняем версию node три раза:
+		node-version: 20.18.1
+-------
+git status
+git add -A
+git commit -m "commit-8"
+git push
+-------
+	на AppVeyor сборка не прошла - бэйджик красный
+	удалил yarn.lock
+	на AppVeyor сборка прошла - бэйджик зелёный, но много предупреждений.
+	Провёл установку зависимостей:
+		yarn 
+-------
+git status
+git add -A
+git commit -m "commit-10"
+git push
+-------
+	сборка прошда успешно, приступаем к уроку лекции
+=================================================================================================

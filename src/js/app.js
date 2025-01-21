@@ -1,3 +1,24 @@
+// TODO: write code here
+
+console.log('app.js bundled');
+
+const fileContainer = document.querySelector('.file-container');
+const fileInput = fileContainer.querySelector('.overlapped');
+
+fileContainer.addEventListener('click', (e) => {
+  console.log(e);
+
+  console.log('click');
+});
+
+setTimeout(() => fileInput.dispatchEvent(new MouseEvent('click')), 6000);
+
+fileInput.addEventListener('click', (e) => {
+    console.log(e);
+});
+
+
+
 // // TODO: write code here
 // import { mdConvert } from 'md-converter';
 
