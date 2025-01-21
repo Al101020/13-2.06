@@ -6,6 +6,10 @@
      "jest": true
   },
   "rules": {
+    "no-template-curly-in-string": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
+    "no-underscore-dangle": "off",
     "no-restricted-syntax": [
       "error",
       "LabeledStatement",
